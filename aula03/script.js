@@ -1,15 +1,19 @@
-var numeroSecreto = parseInt(Math.random() * 11)
+function chutar() {
+    let elementoResultado = document.getElementById('resultado')
+    let chute = parseInt(document.getElementById('valor').value)
 
-function Chutar() {
-    var elementoResultado = document.getElementById('resultado')
-    var chute = parseInt(document.getElementById('valor').value)
-    console.log(chute)
-
-    if (chute == numeroSecreto) {
+    if (chute === numeroSecreto) {
         elementoResultado.innerHTML = "Você acertou"
-    } else if (chute > 18 || chute < 0) {
+    } else if (chute > 10 || chute < 0) {
         elementoResultado.innerHTML = "Você deve digitar um número de 0 a 10"
     } else {
-        elementoResultado.innerHTML = "Errou"
+        if (chute > numeroSecreto) {
+            elementoResultado.innerHTML = `Errou, o número é menor que ${chute}!`
+        } else {
+            elementoResultado.innerHTML = `Errou, o número é maior que ${chute}!`
+        }
+        
     }
 }
+
+let numeroSecreto = parseInt(Math.random() * 11)
