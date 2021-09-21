@@ -45,8 +45,8 @@ body {
   
   .form-wrapper input {
     display: block;
-    margin: 0 auto;
-    padding: 10px 15px;
+    margin: 10px auto;
+    padding: 10px 30px;
   }
   
   .form-wrapper button {
@@ -57,7 +57,7 @@ body {
     padding: 15px 20px;
     font-size: 16px;
     border-radius: 4px;
-    margin-top: 20px;
+    margin-top: 5px;
     cursor: pointer;
     transition: 0.3s;
   }
