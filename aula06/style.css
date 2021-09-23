@@ -54,4 +54,7 @@
     border: solid 1px white;
     color: white;
   }
-  
+
+  .botao__zerar {
+      margin-top: 20px;
+  }

@@ -22,6 +22,17 @@ function adicionarDerrota(i) {
     exibeJogadoresNaTela(jogadores)
 }
 
+function zerar() {
+    for (let i = 0; i < jogadores.length; i++) {
+        let jogador = jogadores[i]
+        jogador.vitorias = 0
+        jogador.empates = 0
+        jogador.derrotas = 0
+        jogador.pontos = calculaPontos(jogador)
+    }
+    exibeJogadoresNaTela(jogadores)
+}
+
 function exibeJogadoresNaTela(jogadores) {
     let elemento = ""
     for (let i = 0; i < jogadores.length; i++) {
