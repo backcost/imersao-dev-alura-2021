@@ -55,6 +55,29 @@
     color: white;
   }
 
-  .botao__zerar {
-      margin-top: 20px;
+  .form-wrapper {
+    margin: 10px;
+    font-size: 14px;
+  }
+  
+  .form-wrapper input {
+    margin: 10px auto;
+    padding: 7px 5px;
+    border-radius: 7px;
+    font-weight: bold;
+  }
+  
+  .form-wrapper button {
+    color: #ffffff;
+    background: rgba(0, 89, 255, 0.349);
+    font-weight: bold;
+    padding: 7px 25px;
+    border-radius: 7px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .form-wrapper button:hover {
+    opacity: 0.8;
   }

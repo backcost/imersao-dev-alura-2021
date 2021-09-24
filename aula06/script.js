@@ -50,6 +50,17 @@ function exibeJogadoresNaTela(jogadores) {
     tabelaJogadores.innerHTML = elemento
 }
 
+function adicionarJogador() {
+    let nomeJogador = document.getElementById('jogador__nome').value
+    if (nomeJogador === '') {
+        console.error('Nome não digitado')
+    } else {
+        let novoJogador = { nome: nomeJogador, vitorias: 0, empates: 0, derrotas: 0, pontos: 0 }
+        jogadores.push(novoJogador)
+        exibeJogadoresNaTela(jogadores)
+    }
+}
+
 
 let rafa = { nome: "Rafa", vitorias: 2, empates: 1, derrotas: 1, pontos: 0 }
 let paulo = { nome: "Paulo", vitorias: 1, empates: 1, derrotas: 2, pontos: 0 }
