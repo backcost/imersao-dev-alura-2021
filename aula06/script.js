@@ -51,14 +51,42 @@ function exibeEquipesNaTela(equipes) {
 }
 
 function adicionarTime() {
-    let nomeTime = document.getElementById('time__nome').value
+    let nomeTime = capitalizeFirst(document.getElementById('time__nome').value)
     if (nomeTime === '') {
         console.error('Nome não digitado')
     } else {
+        for (let i = 0; i < equipes.length; i++) {
+            if (equipes[i].nome === nomeTime) {
+                return console.error('Já existe uma equipe com esse nome')
+            }
+        }
         let novoTime = { nome: nomeTime, vitorias: 0, empates: 0, derrotas: 0, pontos: 0 }
         equipes.push(novoTime)
         exibeEquipesNaTela(equipes)
     }
+}
+
+function removerTime() {
+    let nomeTime = capitalizeFirst(document.getElementById('time__nome').value)
+    if (nomeTime === '') {
+        console.error('Nome não digitado')
+    } else {
+        for (let i = 0; i < equipes.length; i++) {
+            if (equipes[i].nome === nomeTime) {
+                equipes.splice(i, 1)
+                return exibeEquipesNaTela(equipes)
+            }
+        }
+        console.error('Nome não encontrado')
+    }
+}
+
+function capitalizeFirst(string) {
+    let arr = string.split(' ')
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    return arr.join(' ')
 }
 
 
