@@ -1,75 +1,75 @@
-function calculaPontos(jogador) {
-    return jogador.vitorias * 3 + jogador.empates
+function calculaPontos(time) {
+    return time.vitorias * 3 + time.empates
 }
 
 function adicionarVitoria(i) {
-    let jogador = jogadores[i]
-    jogador.vitorias++
-    jogador.pontos = calculaPontos(jogador)
-    exibeJogadoresNaTela(jogadores)
+    let time = equipes[i]
+    time.vitorias++
+    time.pontos = calculaPontos(time)
+    exibeEquipesNaTela(equipes)
 }
   
 function adicionarEmpate(i) {
-    let jogador = jogadores[i]
-    jogador.empates++
-    jogador.pontos = calculaPontos(jogador)
-    exibeJogadoresNaTela(jogadores)
+    let time = equipes[i]
+    time.empates++
+    time.pontos = calculaPontos(time)
+    exibeEquipesNaTela(equipes)
 }
   
 function adicionarDerrota(i) {
-    let jogador = jogadores[i]
-    jogador.derrotas++
-    exibeJogadoresNaTela(jogadores)
+    let time = equipes[i]
+    time.derrotas++
+    exibeEquipesNaTela(equipes)
 }
 
 function zerar() {
-    for (let i = 0; i < jogadores.length; i++) {
-        let jogador = jogadores[i]
-        jogador.vitorias = 0
-        jogador.empates = 0
-        jogador.derrotas = 0
-        jogador.pontos = calculaPontos(jogador)
+    for (let i = 0; i < equipes.length; i++) {
+        let time = equipes[i]
+        time.vitorias = 0
+        time.empates = 0
+        time.derrotas = 0
+        time.pontos = calculaPontos(time)
     }
-    exibeJogadoresNaTela(jogadores)
+    exibeEquipesNaTela(equipes)
 }
 
-function exibeJogadoresNaTela(jogadores) {
+function exibeEquipesNaTela(equipes) {
     let elemento = ""
-    for (let i = 0; i < jogadores.length; i++) {
+    for (let i = 0; i < equipes.length; i++) {
         elemento += 
-        `<tr><td>${jogadores[i].nome}</td>
-        <td>${jogadores[i].vitorias}</td>
-        <td>${jogadores[i].empates}</td>
-        <td>${jogadores[i].derrotas}</td>
-        <td>${jogadores[i].pontos}</td>
+        `<tr><td>${equipes[i].nome}</td>
+        <td>${equipes[i].vitorias}</td>
+        <td>${equipes[i].empates}</td>
+        <td>${equipes[i].derrotas}</td>
+        <td>${equipes[i].pontos}</td>
         <td><button onClick="adicionarVitoria(${i})">Vitória</button></td>
         <td><button onClick="adicionarEmpate(${i})">Empate</button></td>
         <td><button onClick="adicionarDerrota(${i})">Derrota</button></td></tr>`
     }
-    let tabelaJogadores = document.getElementById("tabelaJogadores")
-    tabelaJogadores.innerHTML = elemento
+    let tabelaEquipes = document.getElementById("tabelaEquipes")
+    tabelaEquipes.innerHTML = elemento
 }
 
-function adicionarJogador() {
-    let nomeJogador = document.getElementById('jogador__nome').value
-    if (nomeJogador === '') {
+function adicionarTime() {
+    let nomeTime = document.getElementById('time__nome').value
+    if (nomeTime === '') {
         console.error('Nome não digitado')
     } else {
-        let novoJogador = { nome: nomeJogador, vitorias: 0, empates: 0, derrotas: 0, pontos: 0 }
-        jogadores.push(novoJogador)
-        exibeJogadoresNaTela(jogadores)
+        let novoTime = { nome: nomeTime, vitorias: 0, empates: 0, derrotas: 0, pontos: 0 }
+        equipes.push(novoTime)
+        exibeEquipesNaTela(equipes)
     }
 }
 
 
-let rafa = { nome: "Rafa", vitorias: 2, empates: 1, derrotas: 1, pontos: 0 }
-let paulo = { nome: "Paulo", vitorias: 1, empates: 1, derrotas: 2, pontos: 0 }
-let gui = { nome: "Gui", vitorias: 1, empates: 1, derrotas: 2, pontos: 0 }
+let flamengo = { nome: "Flamengo", vitorias: 2, empates: 1, derrotas: 1, pontos: 0 }
+let vasco = { nome: "Vasco", vitorias: 1, empates: 1, derrotas: 2, pontos: 0 }
+let fluminense = { nome: "Fluminense", vitorias: 1, empates: 1, derrotas: 2, pontos: 0 }
 
-let jogadores = [rafa, paulo, gui]
+let equipes = [flamengo, vasco, fluminense]
 
-rafa.pontos = calculaPontos(rafa)
-paulo.pontos = calculaPontos(paulo)
-gui.pontos = calculaPontos(gui)
+flamengo.pontos = calculaPontos(flamengo)
+vasco.pontos = calculaPontos(vasco)
+fluminense.pontos = calculaPontos(fluminense)
 
-exibeJogadoresNaTela(jogadores)
+exibeEquipesNaTela(equipes)
