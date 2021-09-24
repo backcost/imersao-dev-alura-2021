@@ -4,12 +4,12 @@
   
   body {
     font-family: "Roboto Mono", monospace;
-    min-height: 400px;
-    background-image: url("https://www.alura.com.br/assets/img/imersoes/dev-2021/tabela-classificacao-bg.png");
+    min-height: 2000px;
+    background-image: url("https://www.gazetaesportiva.com/wp-content/uploads/imagem/2020/04/14/cbf.jpeg");
     background-color: #111;
     background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: initial;
+    background-repeat: repeat-y;
   }
   
   .container {
@@ -19,12 +19,12 @@
   }
   
   .page-title {
-    color: #ffffff;
+    color: black;
     margin: 0 0 5px;
   }
   
   .page-subtitle {
-    color: #ffffff;
+    color: black;
     margin-top: 5px;
   }
   
@@ -40,7 +40,7 @@
   }
   
   table {
-    border: 2px solid white;
+    border: 2px solid black;
     border-collapse: collapse;
   }
   
@@ -51,7 +51,7 @@
   th,
   tr,
   td {
-    border: solid 1px white;
+    border: solid 1px black;
     color: white;
   }
 
@@ -68,8 +68,8 @@
   }
   
   .form-wrapper button {
-    color: #ffffff;
-    background: rgba(0, 89, 255, 0.349);
+    color: black;
+    background: rgba(255, 238, 0, 0.349);
     font-weight: bold;
     padding: 7px 25px;
     border-radius: 7px;
