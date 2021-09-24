@@ -89,6 +89,21 @@ function capitalizeFirst(string) {
     return arr.join(' ')
 }
 
+/* function validarLogicaDosJogos() {
+    let vitorias = 0
+    let empates = 0
+    let derrotas = 0
+
+    for (let i = 0; i < equipes.length; i++) {
+        vitorias += equipes[i].vitorias
+        empates += equipes[i].empates
+        derrotas += equipes[i].derrotas
+    }   
+    console.log(vitorias)
+    console.log(empates)
+    console.log(derrotas)
+
+} */
 
 let flamengo = { nome: "Flamengo", vitorias: 2, empates: 1, derrotas: 1, pontos: 0 }
 let vasco = { nome: "Vasco", vitorias: 1, empates: 1, derrotas: 2, pontos: 0 }
@@ -101,3 +116,9 @@ vasco.pontos = calculaPontos(vasco)
 fluminense.pontos = calculaPontos(fluminense)
 
 exibeEquipesNaTela(equipes)
+
+/* Validar se todos os pontos estão fazendo sentido, tanto o 
+número de empates, quanto derrotas e vitórias com os demais 
+jogadores (impossível haver mais vitórias que derrotas, por exemplo)
+
+Adicionar a imagem de cada jogador */
