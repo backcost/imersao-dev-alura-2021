@@ -1,0 +1,1 @@
+const mudaModo = () => document.body.classList.toggle('dark')
