@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
 body {
-    background: linear-gradient(236.85deg, #041832 27.26%, #3468A7 96.03%);   font-family: 'Roboto', sans-serif;
+    background: linear-gradient(236.85deg, #32040400 27.26%, #6634a7 96.03%);   
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -14,18 +15,14 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.cabecalho {
-    display: flex;
-    justify-content: space-between;
+.container__profile {
+    text-align: center;
+    margin-right: 24px;
 }
 
-.perfil {
-    padding: 5px;
-}
-
-.tema button {
-    align-self: center;
-    font-size: 16px;
+.theme__button {
+    margin: 64px 0 30px;
+    font-size: 14px;
     padding: 8px 16px;
     background: #ECF4FF;
     box-sizing: border-box;
@@ -33,68 +30,56 @@ body {
     border: 2px solid #0E1D2F;
   }
 
-.perfil-foto {
-    max-width: 130px;
-    border-radius: 460px;
+.profile__photo {
+    max-width: 120px;
+    border-radius: 50%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.titulo h1 {
+.tittle__name {
     font-weight: 700;
-    font-size: 26px;
+    font-size: 23px;
 }
 
-.titulo h3 {
+.tittle__job {
     font-weight: normal;
     font-size: 18px;
 }
 
-.portfolio {
-    width: 1000px;
+.container__portfolio {
+    width: 1500px;
     grid-template-columns: 2fr 1fr;
     gap: 16px;
 }
 
-.projetos {
+.portfolio__projects {
     max-height: 1000px;
     overflow-y: scroll;
     scrollbar-width: thin;
     display: flex;
     flex-direction: column;
-    padding: 8px 32px;
-    background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
+    padding: 36px;
+    background: linear-gradient(230.65deg, #3204041f 27.49%, #6634a7 83.19%);
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.conquistas {
-    height: 300px;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 32px;
-    background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
-    border-radius: 20px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-}
-
-.projetos ul {
-    list-style: none;
-    padding-left: 0;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-.projetos li {
+.projects__box {
     list-style-type: none;
     font-size: 20px;
     line-height: 2em;
 }
 
+.box__name {
+    text-align-last: center;
+}
+
+.box__name a {
+    color: #F6F6F6;
+}
+
 .dark {
-    background: linear-gradient(236.85deg, #375B86 27.26%, #6B87A9 96.03%);
+    background: linear-gradient(230.65deg, #320404 27.49%, #6634a7 83.19%);
 }
   
 .dark .container {
@@ -102,11 +87,11 @@ body {
     color: #F6F6F6;
 }
 
-.dark .portfolio {
+.dark .container__portfolio {
     color: #1C1C1C;
 }
 
-.dark .tema button {
+.dark .theme__button {
     color: #FFFFFF;
     background: #1C1C1C;
     box-sizing: border-box;

@@ -1,1 +1,1 @@
-const mudaModo = () => document.body.classList.toggle('dark')
+const changeTheme = () => document.body.classList.toggle('dark')
